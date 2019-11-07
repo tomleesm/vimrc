@@ -1,11 +1,14 @@
+" 使用pathogen.vim
+execute pathogen#infect()
+
 set nocompatible " not compatible with the old-fashion vi mode
 filetype indent on " Enable filetype-specific indenting
 filetype plugin on " Enable filetype-specific plugins
 set mouse=a " 啟用滑鼠操作，選項參考 :h mouse
 
 " 設定 <Leader> 鍵是逗號，原來逗號的按鍵改成 g;
-"let mapleader=","
-"noremap g; ,
+let mapleader=","
+noremap g; ,
 
 if has("win16") || has("win32") || has("win64") || has("win95")
   let dic="c:\\Temp"
@@ -52,6 +55,7 @@ set fileencodings=ucs-bom,utf-8,taiwan,big5,gb2312,latin1 " 嘗試使用哪些�
 
 syntax on " syntax highlight
 set hlsearch " search highlighting
+set incsearch " 隨打即找
 set history=200 " ex 命令的歷史紀錄筆數
 
 " 在 ex mode 輸入 %%，自動帶入目前緩衝區所在目錄
@@ -62,4 +66,3 @@ runtime macros/matchit.vim " 啟用 matchit 外掛
 set tags+=, " 設定 ctags 標籤檔位置，加上目前的工作目錄
 
 set pastetoggle=<f5> " 設定 <F5> 切換 paste 模式
-
