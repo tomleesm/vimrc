@@ -23,6 +23,7 @@ set nobackup " 不要產生修改前的備份檔，也就是 *.*~
 "set backupdir=dic " 設定備份檔存放的目錄
 set swapfile " 產生 swp 檔，備份緩衝區中的內容
 set directory=. " 設定 swap 檔存放的目錄
+set autoread " auto reload when file is changed from outside
 
 set number " 顯示行數
 set wrap " 超過視窗大小就自動換行
@@ -54,6 +55,11 @@ set fileencoding=utf-8 " 新增檔案時使用的編碼
 set fileencodings=ucs-bom,utf-8,taiwan,big5,gb2312,latin1 " 嘗試使用哪些編碼來打開檔案
 
 syntax on " syntax highlight
+set background=dark " 使用暗色 syntax highlight
+set cursorline " 游標所在行加上標示
+" highlight cursorline: 設定 cursorline 顏色
+" highlight 或是 hi 指令應寫在 colorscheme 之後
+highlight cursorline ctermbg=237 cterm=none
 set hlsearch " search highlighting
 set incsearch " 隨打即找
 set history=200 " ex 命令的歷史紀錄筆數
