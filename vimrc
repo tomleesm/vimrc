@@ -1,4 +1,4 @@
-" 使用pathogen.vim
+" 使用pathogen.vim 管理外掛
 execute pathogen#infect()
 
 set nocompatible " not compatible with the old-fashion vi mode
@@ -66,3 +66,8 @@ runtime macros/matchit.vim " 啟用 matchit 外掛
 set tags+=, " 設定 ctags 標籤檔位置，加上目前的工作目錄
 
 set pastetoggle=<f5> " 設定 <F5> 切換 paste 模式
+
+" air-line
+Helptags " 產生 air-line Help tags
+set t_Co=256 " 啟用 256 色支援，air-line theme 才會正常顯示
+let g:airline_theme='powerlineish' " 使用哪個 theme
