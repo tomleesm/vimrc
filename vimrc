@@ -82,10 +82,7 @@ set showmatch " 輸入 ) 和 }，游標會自動跳轉到 ( 和 { 以確定成�
 set wildmenu " ex mode 自動補齊，會列出清單
 set wildignore=*.o,*.class " 自動補齊不列出哪些檔案
 
-" C/C++ specific settings
-autocmd FileType c,cpp,cc set cindent comments=sr:/*,mb:*,el:*/,:// cino=>s,e0,n0,f0,{0,}0,^-1s,:0,=s,g0,h1s,p2,t0,+2,(2,)20,*30
-
-"Restore cursor to file position in previous editing session
+" Restore cursor to file position in previous editing session
 set viminfo='10,\"100,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
