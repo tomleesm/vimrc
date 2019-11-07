@@ -7,7 +7,7 @@ filetype plugin on " Enable filetype-specific plugins
 set mouse=a " 啟用滑鼠操作，選項參考 :h mouse
 
 " 設定 <Leader> 鍵是逗號，原來逗號的按鍵改成 g;
-let mapleader=","
+let g:mapleader=","
 noremap g; ,
 
 if has("win16") || has("win32") || has("win64") || has("win95")
@@ -32,6 +32,7 @@ set smartindent " 使用 smart indent
 set shiftwidth=2 " 指由 >> 縮排時，一次移動幾個 space
 set expandtab " 按下 <Tab> 時改插入 space
 set softtabstop=2 " 按下 <Tab> 時插入幾個 space
+au FileType Makefile set noexpandtab " <Tab> 在 makefile 有特殊意義，所以不要改插入 space
 
 " formatoptions: 文字格式化的選項
 "   t：根據 textwidth 自動換行；
@@ -59,6 +60,8 @@ colorscheme wombat256mod
 set cursorline " 游標所在行加上標示
 set hlsearch " search highlighting
 set incsearch " 隨打即找
+set smartcase " 如果搜尋條件有大寫字母，才區分大小寫
+
 set history=200 " ex 命令的歷史紀錄筆數
 
 " 在 ex mode 輸入 %%，自動帶入目前緩衝區所在目錄
@@ -74,3 +77,34 @@ set pastetoggle=<f5> " 設定 <F5> 切換 paste 模式
 Helptags " 產生 air-line Help tags
 set t_Co=256 " 啟用 256 色支援，air-line theme 才會正常顯示
 let g:airline_theme='powerlineish' " 使用哪個 theme
+
+set showmatch " 輸入 ) 和 }，游標會自動跳轉到 ( 和 { 以確定成對，然後再跳回來
+set wildmenu " ex mode 自動補齊，會列出清單
+set wildignore=*.o,*.class " 自動補齊不列出哪些檔案
+
+" C/C++ specific settings
+autocmd FileType c,cpp,cc set cindent comments=sr:/*,mb:*,el:*/,:// cino=>s,e0,n0,f0,{0,}0,^-1s,:0,=s,g0,h1s,p2,t0,+2,(2,)20,*30
+
+"Restore cursor to file position in previous editing session
+set viminfo='10,\"100,:20,%,n~/.viminfo
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+" replace the current word in all opened buffers
+fun! Replace()
+    let s:word = input("Replace " . expand('<cword>') . " with:")
+    :exe 'bufdo! %s/\<' . expand('<cword>') . '\>/' . s:word . '/ge'
+    :unlet! s:word
+endfun
+map <leader>r :call Replace()<CR>
+
+" 在分割視窗中移動
+" <C-J> 跳到下面的分割窗並放到最大
+map <C-J> <C-W>j<C-W>_
+" <C-K> 跳到上面的分割窗並放到最大
+map <C-K> <C-W>k<C-W>_
+" <C-H> 跳到左邊的分割窗並放到最大
+nmap <C-H> <C-W>h<C-W><bar>
+" <C-L> 跳到右邊的分割窗並放到最大
+nmap <C-L> <C-W>l<C-W><bar>
+set wmw=1 " 設定最小寬度為1，可以最大化寬度，又能提醒自己有分割視窗存在
+set wmh=1 " 設定最小高度為1，可以最大化高度，又能提醒自己有分割視窗存在
