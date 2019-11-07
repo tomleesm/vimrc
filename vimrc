@@ -111,3 +111,6 @@ nmap <leader>/ :nohl<CR>
 
 " <F6> 切換顯示 NERDTree
 map <f6> :NERDTreeToggle<CR>
+
+" ,<space> 清除所有行尾空格
+map <leader><space> :FixWhitespace<CR>
