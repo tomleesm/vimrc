@@ -55,11 +55,8 @@ set fileencoding=utf-8 " 新增檔案時使用的編碼
 set fileencodings=ucs-bom,utf-8,taiwan,big5,gb2312,latin1 " 嘗試使用哪些編碼來打開檔案
 
 syntax on " syntax highlight
-set background=dark " 使用暗色 syntax highlight
+colorscheme wombat256mod
 set cursorline " 游標所在行加上標示
-" highlight cursorline: 設定 cursorline 顏色
-" highlight 或是 hi 指令應寫在 colorscheme 之後
-highlight cursorline ctermbg=237 cterm=none
 set hlsearch " search highlighting
 set incsearch " 隨打即找
 set history=200 " ex 命令的歷史紀錄筆數
