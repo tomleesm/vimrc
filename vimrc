@@ -108,3 +108,6 @@ nmap <C-H> <C-W>h<C-W><bar>
 nmap <C-L> <C-W>l<C-W><bar>
 set wmw=1 " 設定最小寬度為1，可以最大化寬度，又能提醒自己有分割視窗存在
 set wmh=1 " 設定最小高度為1，可以最大化高度，又能提醒自己有分割視窗存在
+
+" ,/ turn off search highlighting
+nmap <leader>/ :nohl<CR>
