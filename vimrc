@@ -108,3 +108,6 @@ set wmh=1 " 設定最小高度為1，可以最大化高度，又能提醒自己�
 
 " ,/ turn off search highlighting
 nmap <leader>/ :nohl<CR>
+
+" <F6> 切換顯示 NERDTree
+map <f6> :NERDTreeToggle<CR>
