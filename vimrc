@@ -119,3 +119,8 @@ map <leader><space> :FixWhitespace<CR>
 " 自動 focus 在 tarbar
 map <F8> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
+
+" UltiSnips settings
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
