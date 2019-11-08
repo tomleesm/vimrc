@@ -71,7 +71,7 @@ runtime macros/matchit.vim " 啟用 matchit 外掛
 
 set tags+=, " 設定 ctags 標籤檔位置，加上目前的工作目錄
 
-set pastetoggle=<f5> " 設定 <F5> 切換 paste 模式
+set pastetoggle=<F5> " 設定 <F5> 切換 paste 模式
 
 " air-line
 Helptags " 產生 air-line Help tags
@@ -110,7 +110,12 @@ set wmh=1 " 設定最小高度為1，可以最大化高度，又能提醒自己�
 nmap <leader>/ :nohl<CR>
 
 " <F6> 切換顯示 NERDTree
-map <f6> :NERDTreeToggle<CR>
+map <F6> :NERDTreeToggle<CR>
 
 " ,<space> 清除所有行尾空格
 map <leader><space> :FixWhitespace<CR>
+
+" <F8> 切換顯示 tagbar
+" 自動 focus 在 tarbar
+map <F8> :TagbarToggle<CR>
+let g:tagbar_autofocus = 1
