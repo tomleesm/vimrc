@@ -1,3 +1,7 @@
+## 我的 Vim 設定和外掛
+
+![screenshot](./screenshot.png)
+
 ### 安裝
 
 ```
