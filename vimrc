@@ -1,3 +1,9 @@
+" ultisnips 需要 vim 支援 python3。如果沒有支援，就不啟用 ultisnips
+let g:pathogen_disabled = []
+if !has('python3')
+  call add(g:pathogen_disabled, 'ultisnips')
+endif
+
 " 使用pathogen.vim 管理外掛
 execute pathogen#infect()
 
