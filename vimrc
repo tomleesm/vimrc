@@ -38,18 +38,20 @@ set smartindent " 使用 smart indent
 set shiftwidth=2 " 指由 >> 縮排時，一次移動幾個 space
 set expandtab " 按下 <Tab> 時改插入 space
 set softtabstop=2 " 按下 <Tab> 時插入幾個 space
-au FileType Makefile set noexpandtab " <Tab> 在 makefile 有特殊意義，所以不要改插入 space
+
+autocmd FileType Makefile set noexpandtab " <Tab> 在 makefile 有特殊意義，所以不要改插入 space
+autocmd FileType php setlocal shiftwidth=4 expandtab softtabstop=4 " php 遵守 PSR-2，縮排使用 4 個空格
 
 " formatoptions: 文字格式化的選項
 "   t：根據 textwidth 自動換行；
 "   c：程式碼註解中自動換行，插入合適的註解開始字元
 "   r：插入模式下在註解中輸入 return 時，插入合適的註解開始字元
 "   q：可使用 gq 命令對註解格式化
-"   n：識別編號列表，編號行的下一行的縮排由數字後的空白決定（與「2」衝突，需要「autoindent」)
+"   n：識別編號列表，編號行的下一行的縮排由數字後的空白決定（與 2 衝突，需要 autoindent )
 "   2：使用一段的第二行的縮排來格式化文字
 "   l：在目前行長度超過 textwidth 時，不自動重新格式化
 "   m：在多字節字符處可以折行，對中文特別有效（否則只在空白字符處折行）
-"   M：在拼接兩行時（重新格式化，或者是手工使用「J」命令），如果前一行的結尾或後一行的開頭是多字節字符，則不插入空格，非常適合中文
+"   M：在拼接兩行時（重新格式化，或者是手工使用 J 命令），如果前一行的結尾或後一行的開頭是多字節字符，則不插入空格，非常適合中文
 "   Vim 預設是 tcq
 set formatoptions+=mM
 
