@@ -28,13 +28,13 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-" ,n 切換顯示 NERDTree
-map <Leader>n :NERDTreeToggle<CR>
+" ,f 切換顯示 NERDTree
+map <Leader>f :NERDTreeToggle<CR>
 
 " ,<space> 清除所有行尾空格
 map <leader><space> :FixWhitespace<CR>
 
-" <F8> 切換顯示 tagbar
+" ,t 切換顯示 tagbar
 map <Leader>t :TagbarToggle<CR>
 let g:tagbar_autofocus = 1 " 自動 focus 在 tarbar
 
@@ -93,7 +93,7 @@ autocmd FileType php setlocal shiftwidth=4 expandtab softtabstop=4 " php 遵守 
 "   Vim 預設是 tcq
 set formatoptions+=mM
 
-set pastetoggle=<Leader>p " ,p 切換 paste 模式
+set pastetoggle=<F5> " <F5> 切換 paste 模式
 
 set showmatch " 輸入 ) 和 }，游標會自動跳轉到 ( 和 { 以確定成對，然後再跳回來
 runtime macros/matchit.vim " 啟用 matchit 外掛
