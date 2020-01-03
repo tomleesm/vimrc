@@ -139,6 +139,9 @@ set wildignore=*.o,*.class " 自動補齊不列出哪些檔案
 
 " 設定 path 為 Laravel 的資料夾，方便用 :find 打開檔案
 set path+=app/**,resources/**,routes/**,bootstrap/**,database/**,tests/**,config/**,storage/**
+" 設定 :make 來執行 migration、測試和佈署 assets
+set makeprg=sh\ make.sh
+set errorformat=
 set tags+=, " 設定 ctags 標籤檔位置，加上目前的工作目錄
 
 "-------------------
