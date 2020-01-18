@@ -95,7 +95,7 @@ set formatoptions+=mM
 
 set pastetoggle=<F5> " <F5> 切換 paste 模式
 
-set showmatch " 輸入 ) 和 }，游標會自動跳轉到 ( 和 { 以確定成對，然後再跳回來
+"set showmatch " 輸入 ) 和 }，游標會自動跳轉到 ( 和 { 以確定成對，然後再跳回來
 runtime macros/matchit.vim " 啟用 matchit 外掛
 
 "-------------------
