@@ -39,13 +39,11 @@ git submodule add --force {github-url} bundle/{plugin}
 - [ack.vim](https://github.com/mileszs/ack.vim): 在 Vim 內用 ack 搜尋檔案
 - [vim-polyglot](https://github.com/sheerun/vim-polyglot): 一堆語法 highlight 支援
 - [html5.vim](https://github.com/othree/html5.vim): html5 omni-completion
-- [phpcomplete.vim](https://github.com/shawncplus/phpcomplete.vim): 更好的 php omni-completion
 - [airline](https://github.com/vim-airline/vim-airline) 和 [airline-themes](https://github.com/vim-airline/vim-airline-themes): 華麗的狀態列，覺得 powerline 安裝麻煩，所以用 airline。安裝後原先顯示在狀態列第一行的都不會顯示，例如 `:args`
 - [NERDTree](https://github.com/scrooloose/nerdtree): 資料夾清單，按 `<F6>` 切換顯示，因為它是分割視窗，所以可以使用相關按鍵操作
 - [UltiSnips](https://github.com/SirVer/ultisnips): 輸入 `ife<Tab>` 自動帶入 `if() {} else {}` 。需要 Vim 支援 python3，所以安裝的是 vim-gtk，gvim 只支援python2
 - [vim-trailing-whitespace](https://github.com/bronson/vim-trailing-whitespace): 自動標示行尾空格，並設定 `,<space>` 全部清除
 - [fugitive.vim](https://github.com/tpope/vim-fugitive): Git Wrapper for Vim (只是為了在 airline 顯示分支名稱)
-- [tagbar](https://github.com/majutsushi/tagbar): class/field/method 清單，按 `<F8>` 切換
 
 ### remap Caps Lock to Ctrl, and Ctrl is still Ctrl
 
