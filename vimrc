@@ -128,6 +128,8 @@ fun! Replace()
 endfun
 map <leader>r :call Replace()<CR>
 
+noremap <C-]> g<C-]>
+
 "-------------------
 " AUTO COMPLETE
 "-------------------
