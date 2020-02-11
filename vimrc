@@ -59,6 +59,7 @@ set nobackup " 不要產生修改前的備份檔，也就是 *.*~
 set swapfile " 產生 swp 檔，備份緩衝區中的內容
 set directory=. " 設定 swap 檔存放的目錄
 set autoread " auto reload when file is changed from outside
+set autowriteall " auto write file when quit vim, change buffer or :make etc. See :help autowrite and autowriteall
 
 " Restore cursor to file position in previous editing session
 set viminfo='10,\"100,:20,%,n~/.viminfo
