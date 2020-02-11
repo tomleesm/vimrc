@@ -34,10 +34,6 @@ map <Leader>f :NERDTreeToggle<CR>
 " ,<space> 清除所有行尾空格
 map <leader><space> :FixWhitespace<CR>
 
-" ,t 切換顯示 tagbar
-map <Leader>t :TagbarToggle<CR>
-let g:tagbar_autofocus = 1 " 自動 focus 在 tarbar
-
 "-------------------
 " FILE ENCODING
 "-------------------
