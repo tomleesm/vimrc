@@ -44,6 +44,7 @@ git submodule add --force {github-url} bundle/{plugin}
 - [UltiSnips](https://github.com/SirVer/ultisnips): 輸入 `ife<Tab>` 自動帶入 `if() {} else {}` 。需要 Vim 支援 python3，所以安裝的是 vim-gtk，gvim 只支援python2
 - [vim-trailing-whitespace](https://github.com/bronson/vim-trailing-whitespace): 自動標示行尾空格，並設定 `,<space>` 全部清除
 - [fugitive.vim](https://github.com/tpope/vim-fugitive): Git Wrapper for Vim (只是為了在 airline 顯示分支名稱)
+- [delimitMate](https://github.com/Raimondi/delimitMate): 自動補齊括號和引號。`<Shift><Tab>` 移動游標到自動補齊的括號或引號之後
 
 ### remap Caps Lock to Ctrl, and Ctrl is still Ctrl
 
