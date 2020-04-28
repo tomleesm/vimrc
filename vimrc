@@ -31,6 +31,23 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " ,f 切換顯示 NERDTree
 map <Leader>f :NERDTreeToggle<CR>
 
+" 設定 Netrw
+let g:netrw_banner = 0 " 不顯示上方的 netrw 版本、sort by name 等提示訊息
+let g:netrw_browse_split = 3 " open file in new tab
+let g:netrw_liststyle = 3 " 目錄顯示爲樹狀結構
+let g:netrw_winsize = 24 " 顯示寬度24。預設爲螢幕的一半，太寬了
+let g:netrw_list_hide = '.*\.swp$' " 隱藏副檔名 swp 的備份檔
+autocmd FileType netrw setl bufhidden=wipe " 不新增 NetrwTreeListing buffer 檔案
+
+" netrw 內建快速鍵
+" %: 新增檔案
+" d: 新增目錄
+" D: 刪除游標所在檔案或目錄，會確認刪除
+" R: 重新命名
+" -: 到上一層目錄
+" gh: 切換顯示 . 開頭的檔案或目錄
+" s: 切換排序方式
+
 " ,<space> 清除所有行尾空格
 map <leader><space> :FixWhitespace<CR>
 
