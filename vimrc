@@ -28,9 +28,6 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-" ,f 切換顯示 NERDTree
-map <Leader>f :NERDTreeToggle<CR>
-
 " 設定 Netrw
 let g:netrw_banner = 0 " 不顯示上方的 netrw 版本、sort by name 等提示訊息
 let g:netrw_browse_split = 3 " open file in new tab
