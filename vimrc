@@ -30,10 +30,13 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " 設定 Netrw
 let g:netrw_banner = 0 " 不顯示上方的 netrw 版本、sort by name 等提示訊息
-let g:netrw_browse_split = 3 " open file in new tab
+let g:netrw_browse_split = 0 " open file in current buffer
 let g:netrw_liststyle = 3 " 目錄顯示爲樹狀結構
-let g:netrw_winsize = 24 " 顯示寬度24。預設爲螢幕的一半，太寬了
 let g:netrw_list_hide = '.*\.swp$' " 隱藏副檔名 swp 的備份檔
+
+let ghregex='\(^\|\s\s\)\zs\.\S\+'
+let g:netrw_list_hide.=',' . ghregex " 隱藏 . 開頭的檔案
+
 autocmd FileType netrw setl bufhidden=wipe " 不新增 NetrwTreeListing buffer 檔案
 
 " netrw 內建快速鍵
