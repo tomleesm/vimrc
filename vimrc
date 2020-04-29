@@ -125,6 +125,8 @@ set wrap " 超過視窗大小就自動換行
 Helptags " 產生 air-line Help tags
 set t_Co=256 " 啟用 256 色支援，air-line theme 才會正常顯示
 let g:airline_theme='powerlineish' " 使用哪個 theme
+let g:airline#extensions#tabline#enabled = 1 " show buffer list at top
+let g:airline#extensions#tabline#buffer_nr_show = 1 " show buffer number
 
 "-------------------
 " SEARCH AND REPLACE
