@@ -160,9 +160,18 @@ set path+=app/**,resources/**,routes/**,bootstrap/**,database/**,tests/**,config
 " 設定 :make 來執行 Dusk 測試
 set makeprg=php\ artisan\ dusk
 set errorformat=
-set tags+=, " 設定 ctags 標籤檔位置，加上目前的工作目錄
+
+let s:tags_dictionary = expand('~/.cache') " all tags files store in ~/.cache
+" create tags dictionary if not exists
+if !isdirectory(s:tags_dictionary)
+   silent! call mkdir(s:tags_dictionary, 'p')
+endif
+
+set tags+=~/.cache/tags " 設定 ctags 標籤檔位置
+set notagrelative " tags 的內容使用絕對路徑
 " <F6> 更新 ctags 檔
-nnoremap <F6> :!ctags -R --exclude=.git --exclude=vendor --exclude=node_modules --exclude=.github --exclude=public --exclude=storage<CR>
+nnoremap <F6> :!ctags -R -f ~/.cache/tags --exclude=.git --exclude=vendor --exclude=node_modules --exclude=.github --exclude=public --exclude=storage<CR>
+
 " gf 跳轉要嘗試加上的副檔名
 set suffixesadd+=.php,..html,.htm,.js,.css
 
