@@ -74,7 +74,7 @@ set hidden " 切換緩衝區時，不再提示未存檔，改在離開 Vim 時�
 set nobackup " 不要產生修改前的備份檔，也就是 *.*~
 "set backupdir=dic " 設定備份檔存放的目錄
 set swapfile " 產生 swp 檔，備份緩衝區中的內容
-set directory=. " 設定 swap 檔存放的目錄
+set directory=~/.vim/swp// " 設定 swap 檔存放的目錄
 set autoread " auto reload when file is changed from outside
 set autowriteall " auto write file when quit vim, change buffer or :make etc. See :help autowrite and autowriteall
 
