@@ -137,6 +137,7 @@ fun! Replace()
 endfun
 map <leader>r :call Replace()<CR>
 
+" <C-]> 如果有兩個以上，會自動選擇第一個，g<C-]> 則是列出清單供選擇
 noremap <C-]> g<C-]>
 
 "-------------------
@@ -152,6 +153,8 @@ set wildignore=*.o,*.class " 自動補齊不列出哪些檔案
 set path+=app/**,resources/**,routes/**,bootstrap/**,database/**,tests/**,config/**,storage/**
 " 設定 :make 來執行個別測試
 set makeprg=php\ ./vendor/bin/phpunit\ %\ --stop-on-failure
+" 按下 ,l 存檔並檢查 php 語法
+autocmd FileType php noremap <LEADER>l :w!<CR>:!php -l %<CR>
 
 let s:tags_dictionary = expand('~/.cache') " all tags files store in ~/.cache
 " create tags dictionary if not exists
