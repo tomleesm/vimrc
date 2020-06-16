@@ -105,6 +105,9 @@ set pastetoggle=<F5> " <F5> 切換 paste 模式
 "set showmatch " 輸入 ) 和 }，游標會自動跳轉到 ( 和 { 以確定成對，然後再跳回來
 runtime macros/matchit.vim " 啟用 matchit 外掛
 
+" 離開 Vim 時，儲存程式碼摺疊，打開 Vim 時恢復
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
 "-------------------
 " THEME AND SYNTAX
 "-------------------
