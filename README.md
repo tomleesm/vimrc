@@ -11,6 +11,15 @@ ln -s ~/.vim/vimrc ~/.vimrc
 ln -s ~/.vim/gvimrc ~/.gvimrc
 cd ~/.vim
 git submodule update --init
+
+# install ack for ack.vim
+wget https://beyondgrep.com/ack-v3.4.0 -O ack
+chmod +x ack
+sudo cp ack /usr/bin/
+rm ack
+
+# install exuberant-ctags
+sudo apt install exuberant-ctags
 ```
 
 #### 新增外掛：
