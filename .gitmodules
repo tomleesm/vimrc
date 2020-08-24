@@ -31,3 +31,6 @@
 [submodule "bundle/vim-sql-syntax"]
 	path = bundle/vim-sql-syntax
 	url = https://github.com/shmup/vim-sql-syntax.git
+[submodule "bundle/php.vim"]
+	path = bundle/php.vim
+	url = https://github.com/StanAngeloff/php.vim.git

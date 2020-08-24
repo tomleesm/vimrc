@@ -49,6 +49,7 @@ git submodule add --force {github-url} bundle/{plugin}
 - [fugitive.vim](https://github.com/tpope/vim-fugitive): Git Wrapper for Vim (只是為了在 airline 顯示分支名稱)
 - [delimitMate](https://github.com/Raimondi/delimitMate): 自動補齊括號和引號。`<Shift><Tab>` 移動游標到自動補齊的括號或引號之後
 - [vim-sql-syntax](https://github.com/shmup/vim-sql-syntax): SQL highlight
+- [php.vim](https://github.com/StanAngeloff/php.vim): PHP highlight
 
 ### remap Caps Lock to Ctrl, and Ctrl is still Ctrl
 
