@@ -42,7 +42,6 @@ git submodule add --force {github-url} bundle/{plugin}
 
 - [commentary.vim](https://github.com/tpope/vim-commentary): 可用 `gcc` 或 `gc {motion}` 註解
 - [unimpaired.vim](https://github.com/tpope/vim-unimpaired): 各種成對操作。 `]q` 是 `:cnext`, `[q` 是 `:cprevious`. `]a` 是 `:next`. `[b` 是 `:bprevious`, `[<Space>` 和 `]<Space>` 是在上一行和下一行新增一行，等於大寫 `O<Esc>`
-- [surround.vim](https://github.com/tpope/vim-surround): 用 visual mode 選取後, `S{` 是加上 `{}`， `cs{[` 是把 `{}` 改成 `[]`。repeat.vim 雖然支援用 `.` 重複 surround.vim 命令，但是不支援 visual mode `S{`
 - [vim-visual-star-search](https://github.com/nelstrom/vim-visual-star-search): 用 visual mode 選取後，按 `*` 或 `#` 可以搜尋或反向搜尋，按 `,*` 則是用 vimgrep 搜尋
 - [vim-abolish](https://github.com/tpope/vim-abolish): 交換兩個字串，轉換命名方式(blogTitle 轉成 blog_title, blig-title, BlogTitle, BLOG_TITLE)
 - [ack.vim](https://github.com/mileszs/ack.vim): 在 Vim 內用 ack 搜尋檔案
