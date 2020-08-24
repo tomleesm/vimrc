@@ -12,21 +12,10 @@ noremap g; ,
 "-------------------
 " PLUGIN
 "-------------------
-" ultisnips 需要 vim 支援 python3。如果沒有支援，就不啟用 ultisnips
-let g:pathogen_disabled = []
-if !has('python3')
-  call add(g:pathogen_disabled, 'ultisnips')
-endif
-
 " 使用pathogen.vim 管理外掛
 execute pathogen#infect()
 
 filetype plugin on " Enable filetype-specific plugins
-
-" UltiSnips settings
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " 設定 Netrw
 let g:netrw_banner = 0 " 不顯示上方的 netrw 版本、sort by name 等提示訊息
