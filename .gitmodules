@@ -28,3 +28,6 @@
 [submodule "bundle/delimitMate"]
 	path = bundle/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
+[submodule "bundle/vim-sql-syntax"]
+	path = bundle/vim-sql-syntax
+	url = https://github.com/shmup/vim-sql-syntax.git
