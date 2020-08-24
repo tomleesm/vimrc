@@ -19,9 +19,6 @@
 [submodule "bundle/vim-repeat"]
 	path = bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
-[submodule "bundle/vim-snippets"]
-	path = bundle/vim-snippets
-	url = https://github.com/honza/vim-snippets.git
 [submodule "bundle/vim-trailing-whitespace"]
 	path = bundle/vim-trailing-whitespace
 	url = https://github.com/bronson/vim-trailing-whitespace.git
