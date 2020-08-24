@@ -43,7 +43,6 @@ git submodule add --force {github-url} bundle/{plugin}
 - [commentary.vim](https://github.com/tpope/vim-commentary): 可用 `gcc` 或 `gc {motion}` 註解
 - [unimpaired.vim](https://github.com/tpope/vim-unimpaired): 各種成對操作。 `]q` 是 `:cnext`, `[q` 是 `:cprevious`. `]a` 是 `:next`. `[b` 是 `:bprevious`, `[<Space>` 和 `]<Space>` 是在上一行和下一行新增一行，等於大寫 `O<Esc>`
 - [vim-visual-star-search](https://github.com/nelstrom/vim-visual-star-search): 用 visual mode 選取後，按 `*` 或 `#` 可以搜尋或反向搜尋，按 `,*` 則是用 vimgrep 搜尋
-- [vim-abolish](https://github.com/tpope/vim-abolish): 交換兩個字串，轉換命名方式(blogTitle 轉成 blog_title, blig-title, BlogTitle, BLOG_TITLE)
 - [ack.vim](https://github.com/mileszs/ack.vim): 在 Vim 內用 ack 搜尋檔案
 - [vim-polyglot](https://github.com/sheerun/vim-polyglot): 一堆語法 highlight 支援
 - [html5.vim](https://github.com/othree/html5.vim): html5 omni-completion
