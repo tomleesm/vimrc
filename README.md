@@ -44,7 +44,6 @@ git submodule add --force {github-url} bundle/{plugin}
 - [unimpaired.vim](https://github.com/tpope/vim-unimpaired): 各種成對操作。 `]q` 是 `:cnext`, `[q` 是 `:cprevious`. `]a` 是 `:next`. `[b` 是 `:bprevious`, `[<Space>` 和 `]<Space>` 是在上一行和下一行新增一行，等於大寫 `O<Esc>`
 - [vim-visual-star-search](https://github.com/nelstrom/vim-visual-star-search): 用 visual mode 選取後，按 `*` 或 `#` 可以搜尋或反向搜尋，按 `,*` 則是用 vimgrep 搜尋
 - [ack.vim](https://github.com/mileszs/ack.vim): 在 Vim 內用 ack 搜尋檔案
-- [vim-polyglot](https://github.com/sheerun/vim-polyglot): 一堆語法 highlight 支援
 - [html5.vim](https://github.com/othree/html5.vim): html5 omni-completion
 - [airline](https://github.com/vim-airline/vim-airline) 和 [airline-themes](https://github.com/vim-airline/vim-airline-themes): 華麗的狀態列，覺得 powerline 安裝麻煩，所以用 airline。安裝後原先顯示在狀態列第一行的都不會顯示，例如 `:args`
 - [vim-trailing-whitespace](https://github.com/bronson/vim-trailing-whitespace): 自動標示行尾空格，並設定 `,<space>` 全部清除
