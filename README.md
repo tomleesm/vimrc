@@ -5,7 +5,7 @@
 ### 安裝
 
 ```
-# 如果要用 UltiSnips，需要移除一般的 vim，改裝 vim-gtk
+# 如果需要支援 python3，改裝 vim-gtk
 git clone https://github.com/tomleesm/vimrc.git ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
 ln -s ~/.vim/gvimrc ~/.gvimrc
