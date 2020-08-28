@@ -163,6 +163,12 @@ nnoremap <F6> :!ctags -R -f ~/.cache/tags --exclude=.git --exclude=vendor --excl
 set suffixesadd+=.php,..html,.htm,.js,.css
 
 "-------------------
+" SNIPPETS
+"-------------------
+" Read a HTML template file and paste it into current buffer
+nnoremap <LEADER>html :-1read $HOME/.vim/snippets/template.html<CR>
+
+"-------------------
 " SPLIT WINDOW
 "-------------------
 " <C-J> 跳到下面的分割窗並放到最大
