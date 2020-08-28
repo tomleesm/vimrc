@@ -165,12 +165,14 @@ set suffixesadd+=.php,..html,.htm,.js,.css
 "-------------------
 " SNIPPETS
 "-------------------
-nnoremap <LEADER>phpclass :-1read $HOME/.vim/snippets/class.php<CR>
-nnoremap <LEADER>phpm :-1read $HOME/.vim/snippets/method.php<CR>
+nnoremap <LEADER>pclass :-1read $HOME/.vim/snippets/class.php<CR>
+nnoremap <LEADER>pm :-1read $HOME/.vim/snippets/method.php<CR>
 nnoremap <LEADER>html :-1read $HOME/.vim/snippets/template.html<CR>
 nnoremap <LEADER>if :-1read $HOME/.vim/snippets/if<CR>
 nnoremap <LEADER>eif :-1read $HOME/.vim/snippets/eif<CR>
 nnoremap <LEADER>clo :-1read $HOME/.vim/snippets/closure<CR>
+nnoremap <LEADER>pfor :-1read $HOME/.vim/snippets/for.php<CR>
+nnoremap <LEADER>pfore :-1read $HOME/.vim/snippets/foreach.php<CR>
 
 "-------------------
 " SPLIT WINDOW
