@@ -165,8 +165,12 @@ set suffixesadd+=.php,..html,.htm,.js,.css
 "-------------------
 " SNIPPETS
 "-------------------
-" Read a HTML template file and paste it into current buffer
+nnoremap <LEADER>phpclass :-1read $HOME/.vim/snippets/class.php<CR>
+nnoremap <LEADER>phpm :-1read $HOME/.vim/snippets/method.php<CR>
 nnoremap <LEADER>html :-1read $HOME/.vim/snippets/template.html<CR>
+nnoremap <LEADER>if :-1read $HOME/.vim/snippets/if<CR>
+nnoremap <LEADER>eif :-1read $HOME/.vim/snippets/eif<CR>
+nnoremap <LEADER>clo :-1read $HOME/.vim/snippets/closure<CR>
 
 "-------------------
 " SPLIT WINDOW
