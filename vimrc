@@ -103,7 +103,7 @@ autocmd BufWinEnter *.* silent loadview
 syntax on " syntax highlight
 colorscheme wombat256mod
 set cursorline " 游標所在行加上標示
-set number " 顯示行數
+set relativenumber " 顯示相對行數
 set wrap " 超過視窗大小就自動換行
 
 " air-line
