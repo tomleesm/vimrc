@@ -50,6 +50,7 @@ git submodule add --force {github-url} bundle/{plugin}
 - [delimitMate](https://github.com/Raimondi/delimitMate): 自動補齊括號和引號。`<Shift><Tab>` 移動游標到自動補齊的括號或引號之後
 - [vim-sql-syntax](https://github.com/shmup/vim-sql-syntax): SQL highlight
 - [php.vim](https://github.com/StanAngeloff/php.vim): PHP highlight
+- [NERDTree](https://github.com/preservim/nerdtree): 側邊欄檔案管理
 
 ### remap Caps Lock to Ctrl, and Ctrl is still Ctrl
 
