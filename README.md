@@ -51,6 +51,7 @@ git submodule add --force {github-url} bundle/{plugin}
 - [vim-sql-syntax](https://github.com/shmup/vim-sql-syntax): SQL highlight
 - [php.vim](https://github.com/StanAngeloff/php.vim): PHP highlight
 - [NERDTree](https://github.com/preservim/nerdtree): 側邊欄檔案管理
+- [vim-buftabline](https://github.com/ap/vim-buftabline): 顯示 buffer 分頁。air-line 提供的分頁字太大，也不會顯示右邊是否有其他分頁
 
 ### remap Caps Lock to Ctrl, and Ctrl is still Ctrl
 
