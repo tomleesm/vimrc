@@ -91,8 +91,20 @@ set wrap " 超過視窗大小就自動換行
 
 " air-line
 Helptags " 產生 air-line Help tags
-set t_Co=256 " 啟用 256 色支援，air-line theme 才會正常顯示
-let g:airline_theme='powerlineish' " 使用哪個 theme
+" 啟用 256 色支援和 laststatus=2，light-line 才會正常顯示
+set t_Co=256
+set laststatus=2
+set noshowmode " 不顯示最底下 -- INSERT -- 提示
+let g:lightline = {
+      \ 'colorscheme': 'powerline',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
 
 " vim-buftabline
 let g:buftabline_show=1 " show buffer list if there are two or more buffers
