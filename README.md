@@ -54,6 +54,7 @@ git submodule add --force {github-url} bundle/{plugin}
 - [lightline.vim](https://github.com/itchyny/lightline.vim): 底下的狀態列
 - [eunuch.vim](https://github.com/tpope/vim-eunuch): Linux 檔案的簡便刪除、改名、移動等操作
 - [vim-easy-align](https://github.com/junegunn/vim-easy-align): 方便對齊等號、空格
+- [vim-wordmotion](https://github.com/chaoren/vim-wordmotion): 使用 w, b, e, ge 在 CamelCase 移動
 
 ### remap Caps Lock to Ctrl, and Ctrl is still Ctrl
 
