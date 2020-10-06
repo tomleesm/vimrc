@@ -14,6 +14,8 @@ noremap g; ,
 "-------------------
 " 使用pathogen.vim 管理外掛
 execute pathogen#infect()
+" Pathogen includes a :Helptags command that automatically generates help tags for plugins
+Helptags
 
 filetype plugin on " Enable filetype-specific plugins
 
