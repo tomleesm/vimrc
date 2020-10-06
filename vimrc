@@ -99,7 +99,10 @@ let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'gitbranch' ] ],
+      \   'right': [ [ 'filetype', 'fileformat', 'fileencoding' ],
+      \              [ 'absolutepath' ],
+      \              [ 'modified', 'readonly' ] ]
       \ },
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead'
