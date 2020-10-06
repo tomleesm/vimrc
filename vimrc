@@ -103,14 +103,10 @@ set noshowmode " 不顯示最底下 -- INSERT -- 提示
 let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch' ] ],
+      \   'left': [ [ 'mode', 'paste' ] ],
       \   'right': [ [ 'absolutepath' ],
       \              [ 'filetype', 'fileformat', 'fileencoding' ],
       \              [ 'modified', 'readonly' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
       \ },
       \ }
 
