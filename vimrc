@@ -80,6 +80,11 @@ runtime macros/matchit.vim " 啟用 matchit 外掛
 " 離開 Vim 時，儲存程式碼摺疊，打開 Vim 時恢復
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 "-------------------
 " THEME AND SYNTAX
 "-------------------

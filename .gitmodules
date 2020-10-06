@@ -43,3 +43,6 @@
 [submodule "bundle/sonokai"]
 	path = bundle/sonokai
 	url = https://github.com/sainnhe/sonokai.git
+[submodule "bundle/vim-easy-align"]
+	path = bundle/vim-easy-align
+	url = https://github.com/junegunn/vim-easy-align.git
