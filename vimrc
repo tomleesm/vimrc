@@ -34,14 +34,11 @@ set fileencodings=ucs-bom,utf-8,taiwan,big5,gb2312,latin1 " 嘗試使用哪些�
 "-------------------
 " SAVE FILE
 "-------------------
-
 set hidden " 切換緩衝區時，不再提示未存檔，改在離開 Vim 時提示存檔
 set nobackup " 不要產生修改前的備份檔，也就是 *.*~
-"set backupdir=dic " 設定備份檔存放的目錄
 set swapfile " 產生 swp 檔，備份緩衝區中的內容
 set directory=/tmp " 設定 swap 檔存放的目錄
 set autoread " auto reload when file is changed from outside
-set autowriteall " auto write file when quit vim, change buffer or :make etc. See :help autowrite and autowriteall
 
 " Restore cursor to file position in previous editing session
 set viminfo='10,\"100,:20,%,n~/.viminfo
@@ -77,10 +74,6 @@ set pastetoggle=<F5> " <F5> 切換 paste 模式
 "set showmatch " 輸入 ) 和 }，游標會自動跳轉到 ( 和 { 以確定成對，然後再跳回來
 runtime macros/matchit.vim " 啟用 matchit 外掛
 
-" 離開 Vim 時，儲存程式碼摺疊，打開 Vim 時恢復
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
-
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
@@ -91,12 +84,10 @@ nmap ga <Plug>(EasyAlign)
 syntax on " syntax highlight
 colorscheme wombat256mod
 set cursorline " 游標所在行加上標示
-set number relativenumber
+set number
 set wrap " 超過視窗大小就自動換行
 
-" air-line
-Helptags " 產生 air-line Help tags
-" 啟用 256 色支援和 laststatus=2，light-line 才會正常顯示
+" 啟用 256 色支援和 laststatus=2，lightline 才會正常顯示
 set t_Co=256
 set laststatus=2
 set noshowmode " 不顯示最底下 -- INSERT -- 提示
@@ -125,14 +116,6 @@ set incsearch " 隨打即找
 set smartcase " 如果搜尋條件有大寫字母，才區分大小寫
 set hlsearch " search highlighting
 nmap <leader>/ :nohl<CR> " ,/ turn off search highlighting
-
-" replace the current word in all opened buffers
-fun! Replace()
-    let s:word = input("Replace " . expand('<cword>') . " with:")
-    :exe 'bufdo! %s/\<' . expand('<cword>') . '\>/' . s:word . '/ge'
-    :unlet! s:word
-endfun
-map <leader>r :call Replace()<CR>
 
 " <C-]> 如果有兩個以上，會自動選擇第一個，g<C-]> 則是列出清單供選擇
 noremap <C-]> g<C-]>
@@ -164,9 +147,6 @@ set notagrelative " tags 的內容使用絕對路徑
 " <F6> 更新 ctags 檔
 nnoremap <F6> :!ctags -R -f ~/.cache/tags --exclude=.git --exclude=vendor --exclude=node_modules --exclude=.github --exclude=public --exclude=storage<CR>
 
-" gf 跳轉要嘗試加上的副檔名
-set suffixesadd+=.php,..html,.htm,.js,.css
-
 "-------------------
 " SNIPPETS
 "-------------------
@@ -178,17 +158,3 @@ nnoremap <LEADER>eif :-1read $HOME/.vim/snippets/eif<CR>
 nnoremap <LEADER>clo :-1read $HOME/.vim/snippets/closure<CR>
 nnoremap <LEADER>pfor :-1read $HOME/.vim/snippets/for.php<CR>
 nnoremap <LEADER>pfore :-1read $HOME/.vim/snippets/foreach.php<CR>
-
-"-------------------
-" SPLIT WINDOW
-"-------------------
-" <C-J> 跳到下面的分割窗並放到最大
-map <C-J> <C-W>j<C-W>_
-" <C-K> 跳到上面的分割窗並放到最大
-map <C-K> <C-W>k<C-W>_
-" <C-H> 跳到左邊的分割窗並放到最大
-nmap <C-H> <C-W>h<C-W><bar>
-" <C-L> 跳到右邊的分割窗並放到最大
-nmap <C-L> <C-W>l<C-W><bar>
-set wmw=1 " 設定最小寬度為1，可以最大化寬度，又能提醒自己有分割視窗存在
-set wmh=1 " 設定最小高度為1，可以最大化高度，又能提醒自己有分割視窗存在
