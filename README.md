@@ -47,8 +47,6 @@ git submodule add --force {github-url} bundle/{plugin}
 - [vim-trailing-whitespace](https://github.com/bronson/vim-trailing-whitespace): 自動標示行尾空格，並設定 `,<space>` 全部清除
 - [fugitive.vim](https://github.com/tpope/vim-fugitive): Git Wrapper for Vim (只是為了在 lightline 顯示分支名稱)
 - [delimitMate](https://github.com/Raimondi/delimitMate): 自動補齊括號和引號。`<Shift><Tab>` 移動游標到自動補齊的括號或引號之後
-- [vim-sql-syntax](https://github.com/shmup/vim-sql-syntax): SQL highlight
-- [php.vim](https://github.com/StanAngeloff/php.vim): PHP highlight
 - [NERDTree](https://github.com/preservim/nerdtree): 側邊欄檔案管理
 - [vim-buftabline](https://github.com/ap/vim-buftabline): 顯示 buffer 分頁。air-line 提供的分頁字太大，也不會顯示右邊是否有其他分頁
 - [lightline.vim](https://github.com/itchyny/lightline.vim): 底下的狀態列
