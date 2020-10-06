@@ -43,9 +43,6 @@
 [submodule "bundle/vim-easy-align"]
 	path = bundle/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align.git
-[submodule "bundle/vim-wordmotion"]
-	path = bundle/vim-wordmotion
-	url = https://github.com/chaoren/vim-wordmotion.git
 [submodule "bundle/splitjoin.vim"]
 	path = bundle/splitjoin.vim
 	url = https://github.com/AndrewRadev/splitjoin.vim.git
