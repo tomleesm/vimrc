@@ -68,9 +68,10 @@ hi DiffChange					ctermbg=237										guibg=#382a37
 "hi SpellCap
 "hi SpellLocal
 "hi SpellRare
-"hi TabLine
-"hi TabLineFill
-"hi TabLineSel
+hi TabLine     ctermfg=250 ctermbg=237 cterm=none guifg=#e2e2e3 guibg=#414550 gui=none
+hi TabLineFill ctermfg=246 ctermbg=236 cterm=none guifg=#7f8490 guibg=#30323a gui=none
+" hi TabLineSel  ctermfg=232   ctermbg=148 cterm=none guifg=#080808 guibg=#afdf00 gui=none
+hi TabLineSel  ctermfg=255 ctermbg=70 cterm=none guifg=#eeeeee guibg=#91d072 gui=none
 "hi Tooltip
 "hi User1
 "hi User9
@@ -96,5 +97,11 @@ hi Todo			ctermfg=101		cterm=none		guifg=#857b6f	gui=italic
 hi! link FoldColumn		Folded
 hi! link CursorColumn	CursorLine
 hi! link NonText		LineNr
+
+" buffer list
+highlight! link BufTabLineCurrent TabLineSel
+highlight! link BufTabLineActive TabLine
+highlight! link BufTabLineHidden TabLineFill
+highlight! link BufTabLineFill TabLineFill
 
 " vim:set ts=4 sw=4 noet:
