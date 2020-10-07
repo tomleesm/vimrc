@@ -32,6 +32,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " ,<space> 清除所有行尾空格
 map <leader><space> :FixWhitespace<CR>
 
+" fugitive.vim 設定
+nnoremap <F5> :Git status<CR>
+nnoremap <F6> :Gdiffsplit<CR> " 比較修改了什麼
+nnoremap <F8> :Git add %<CR> " git add 目前的檔案
+nnoremap <F10> :Gread<CR> " 撤銷修改，等於 :Git checkout -- %
+
 "-------------------
 " FILE ENCODING
 "-------------------
@@ -78,7 +84,7 @@ autocmd FileType php setlocal shiftwidth=4 expandtab softtabstop=4 " php 遵守 
 "   Vim 預設是 tcq
 set formatoptions+=mM
 
-set pastetoggle=<F5> " <F5> 切換 paste 模式
+set pastetoggle=<F3> " 切換 paste 模式
 
 "set showmatch " 輸入 ) 和 }，游標會自動跳轉到 ( 和 { 以確定成對，然後再跳回來
 runtime macros/matchit.vim " 啟用 matchit 外掛
@@ -153,8 +159,8 @@ endif
 
 set tags+=~/.cache/tags " 設定 ctags 標籤檔位置
 set notagrelative " tags 的內容使用絕對路徑
-" <F6> 更新 ctags 檔
-nnoremap <F6> :!ctags -R -f ~/.cache/tags --exclude=.git --exclude=vendor --exclude=node_modules --exclude=.github --exclude=public --exclude=storage<CR>
+" 更新 ctags 檔
+nnoremap <F4> :!ctags -R -f ~/.cache/tags --exclude=.git --exclude=vendor --exclude=node_modules --exclude=.github --exclude=public --exclude=storage<CR>
 
 "-------------------
 " SNIPPETS
