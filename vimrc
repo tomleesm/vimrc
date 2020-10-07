@@ -21,6 +21,13 @@ filetype plugin on " Enable filetype-specific plugins
 
 " ,f 切換顯示 NERDTree
 map <LEADER>f :NERDTreeToggle<CR>
+" 開啓檔案後關閉 NERDTree
+let g:NERDTreeQuitOnOpen=1
+" 用 vim 打開目錄時，使用 NERDTree，不是用 netrw
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+" close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " ,<space> 清除所有行尾空格
 map <leader><space> :FixWhitespace<CR>
