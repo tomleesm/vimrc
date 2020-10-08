@@ -53,7 +53,6 @@ git submodule add --force {github-url} bundle/{plugin}
 - [NERDTree](https://github.com/preservim/nerdtree): 側邊欄檔案管理
 - [vim-buftabline](https://github.com/ap/vim-buftabline): 顯示 buffer 分頁。air-line 提供的分頁字太大，也不會顯示右邊是否有其他分頁
 - [lightline.vim](https://github.com/itchyny/lightline.vim): 底下的狀態列
-- [eunuch.vim](https://github.com/tpope/vim-eunuch): Linux 檔案的簡便刪除、改名、移動等操作
 - [vim-easy-align](https://github.com/junegunn/vim-easy-align): 方便對齊等號、空格
 - [vim-polyglot](https://github.com/sheerun/vim-polyglot): 各種語法 highlight 支援
 
