@@ -1,6 +1,6 @@
 ## 我的 Vim 設定和外掛
 
-![screenshot](./screenshot.png)
+![screenshot](./screenshot.png?raw=true)
 
 ### 安裝
 
