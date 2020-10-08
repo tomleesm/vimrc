@@ -32,9 +32,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " ,<space> 清除所有行尾空格
 map <leader><space> :FixWhitespace<CR>
 
-" fugitive.vim 設定
+" Git 快速鍵設定
 nnoremap <F5> :Git status<CR>
 nnoremap <F6> :Gdiffsplit<CR> " 比較修改了什麼
+nnoremap <F7> :GV<CR> " 使用 gv.vim 顯示 git log
 nnoremap <F8> :Git add %<CR> " git add 目前的檔案
 nnoremap <F10> :Gread<CR> " 撤銷修改，等於 :Git checkout -- %
 

@@ -23,17 +23,20 @@ sudo apt install exuberant-ctags
 ```
 
 #### 新增外掛：
+
 ```
-cd ~/.vim; git submodule add {github-url} bundle/{plugin}
+git submodule add {github-url} bundle/{plugin}
 ```
 
 #### 刪除外掛：
+
 ```
-cd ~/.vim; rm -rf bundle/{plugin}
+rm -rf bundle/{plugin}
 git rm bundle/{plugin} # 會自動修改 .gitmodule
 ```
 
 #### 還原刪除的外掛：
+
 ```
 git submodule add --force {github-url} bundle/{plugin}
 ```
@@ -45,7 +48,8 @@ git submodule add --force {github-url} bundle/{plugin}
 - [vim-visual-star-search](https://github.com/nelstrom/vim-visual-star-search): 用 visual mode 選取後，按 `*` 或 `#` 可以搜尋或反向搜尋，按 `,*` 則是用 vimgrep 搜尋
 - [ack.vim](https://github.com/mileszs/ack.vim): 在 Vim 內用 ack 搜尋檔案
 - [vim-trailing-whitespace](https://github.com/bronson/vim-trailing-whitespace): 自動標示行尾空格，並設定 `,<space>` 全部清除
-- [fugitive.vim](https://github.com/tpope/vim-fugitive): Git Wrapper for Vim (只是為了在 lightline 顯示分支名稱)
+- [fugitive.vim](https://github.com/tpope/vim-fugitive): Git Wrapper for Vim
+- [gv.vim](https://github.com/junegunn/gv.vim): 顯示 git log 和每個 commit 修改了什麼
 - [NERDTree](https://github.com/preservim/nerdtree): 側邊欄檔案管理
 - [vim-buftabline](https://github.com/ap/vim-buftabline): 顯示 buffer 分頁。air-line 提供的分頁字太大，也不會顯示右邊是否有其他分頁
 - [lightline.vim](https://github.com/itchyny/lightline.vim): 底下的狀態列
