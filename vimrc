@@ -147,8 +147,8 @@ set wildignore=*.o,*.class " 自動補齊不列出哪些檔案
 
 " 設定 path 為 Laravel 的資料夾，方便用 :find 打開檔案
 set path+=app/**,resources/**,routes/**,bootstrap/**,database/**,tests/**,config/**,storage/**
-" 設定 :make 來執行個別測試
-set makeprg=php\ ./vendor/bin/phpunit\ %\ --stop-on-failure
+" 設定 :make 來執行單元測試
+set makeprg=php\ ./vendor/bin/phpunit\ --stop-on-failure
 " 按下 ,l 存檔並檢查 php 語法
 autocmd FileType php noremap <LEADER>l :w!<CR>:!php -l %<CR>
 
