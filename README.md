@@ -55,6 +55,7 @@ git submodule add --force {github-url} bundle/{plugin}
 - [lightline.vim](https://github.com/itchyny/lightline.vim): 底下的狀態列
 - [vim-easy-align](https://github.com/junegunn/vim-easy-align): 方便對齊等號、空格
 - [vim-polyglot](https://github.com/sheerun/vim-polyglot): 各種語法 highlight 支援
+- [vim-signature](https://github.com/kshenoy/vim-signature): 左邊的 navigate marks highlight 顯示
 
 ### remap Caps Lock to Ctrl, and Ctrl is still Ctrl
 
