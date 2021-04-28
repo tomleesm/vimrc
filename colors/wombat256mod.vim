@@ -63,7 +63,11 @@ hi DiffChange					ctermbg=237										guibg=#382a37
 "hi PmenuThumb
 "hi Question
 "hi Scrollbar
-"hi SignColumn
+" 左邊的 mark 背景色
+hi SignColumn   ctermbg=16 cterm=none guibg=#000000 gui=none
+" 左邊的 mark 文字顏色
+hi SignatureMarkText ctermfg=45  cterm=none guifg=#00d7ff gui=none
+
 "hi SpellBad
 "hi SpellCap
 "hi SpellLocal
