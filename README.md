@@ -4,9 +4,10 @@
 
 ### 安裝
 
-```
+```bash
 # 如果需要支援 python3，改裝 vim-gtk
-git clone https://github.com/tomleesm/vimrc.git ~/.vim
+# 因爲啓用 2FA，更新時需要用 ssh，所以不是 https
+git clone git@github.com:tomleesm/vimrc.git ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
 ln -s ~/.vim/gvimrc ~/.gvimrc
 cd ~/.vim
