@@ -58,6 +58,7 @@ git submodule add --force {github-url} bundle/{plugin}
 - [vim-polyglot](https://github.com/sheerun/vim-polyglot): 各種語法 highlight 支援
 - [vim-signature](https://github.com/kshenoy/vim-signature): 左邊的 navigate marks highlight 顯示
 - [vim-snipmate](https://github.com/garbas/vim-snipmate): 輸入 `for<TAB>` 產生程式碼片段
+- [auto-pairs](https://github.com/jiangmiao/auto-pairs): 輸入左括號，會自動產生右括號
 
 ### remap Caps Lock to Ctrl, and Ctrl is still Ctrl
 
