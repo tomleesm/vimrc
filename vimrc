@@ -100,7 +100,7 @@ nmap ga <Plug>(EasyAlign)
 syntax on " syntax highlight
 colorscheme wombat256mod
 set cursorline " 游標所在行加上標示
-set number
+set nonumber " 不顯示行數，因爲似乎用不到
 set wrap " 超過視窗大小就自動換行
 
 " 啟用 256 色支援和 laststatus=2，lightline 才會正常顯示
@@ -110,15 +110,10 @@ set noshowmode " 不顯示最底下 -- INSERT -- 提示
 let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch' ],
-      \             [ 'absolutepath' ] ],
-      \   'right': [ [ 'filetype', 'fileformat', 'fileencoding' ],
-      \              [ 'modified', 'readonly' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \ },
+      \   'left': [ [ 'mode', 'paste', 'lineinfo' ],
+      \             [ 'modified', 'readonly' ] ],
+      \   'right': [ [ 'absolutepath', 'filetype', 'fileformat', 'fileencoding' ] ]
+      \ }
       \ }
 
 " vim-buftabline
