@@ -100,7 +100,17 @@ nmap ga <Plug>(EasyAlign)
 syntax on " syntax highlight
 colorscheme wombat256mod
 set cursorline " 游標所在行加上標示
-set nonumber " 不顯示行數，因爲似乎用不到
+
+" Insert mode: absolute line number
+" Normal mode: relative line number
+:set number
+
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+:  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+:augroup END
+"--------------------------------
 set wrap " 超過視窗大小就自動換行
 
 " 啟用 256 色支援和 laststatus=2，lightline 才會正常顯示
