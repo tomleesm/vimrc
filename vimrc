@@ -181,3 +181,4 @@ nnoremap <LEADER>eif :-1read $HOME/.vim/snippets/eif<CR>
 nnoremap <LEADER>clo :-1read $HOME/.vim/snippets/closure<CR>
 nnoremap <LEADER>pfor :-1read $HOME/.vim/snippets/for.php<CR>
 nnoremap <LEADER>pfore :-1read $HOME/.vim/snippets/foreach.php<CR>
+nnoremap <LEADER>vue :-1read $HOME/.vim/snippets/vue<CR>

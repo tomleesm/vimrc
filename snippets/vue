@@ -1,0 +1,23 @@
+<template>
+</template>
+
+<script>
+//import from '';
+
+export default {
+  name: '',
+  components: {
+  },
+  data() {
+    return {
+    }
+  },
+  computed: {
+  },
+  methods: {
+  }
+}
+</script>
+
+<style scoped>
+</style>
