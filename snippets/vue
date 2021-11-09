@@ -2,12 +2,9 @@
 </template>
 
 <script>
-//import from '';
+//import from ''
 
 export default {
-  name: '',
-  components: {
-  },
   data() {
     return {
     }

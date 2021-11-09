@@ -176,12 +176,13 @@ nnoremap <F4> :!ctags -R -f ~/.cache/tags --exclude=.git --exclude=vendor --excl
 "-------------------
 " SNIPPETS
 "-------------------
-nnoremap <LEADER>pclass :-1read $HOME/.vim/snippets/class.php<CR>
-nnoremap <LEADER>pm :-1read $HOME/.vim/snippets/method.php<CR>
-nnoremap <LEADER>html :-1read $HOME/.vim/snippets/template.html<CR>
-nnoremap <LEADER>if :-1read $HOME/.vim/snippets/if<CR>
-nnoremap <LEADER>eif :-1read $HOME/.vim/snippets/eif<CR>
-nnoremap <LEADER>clo :-1read $HOME/.vim/snippets/closure<CR>
-nnoremap <LEADER>pfor :-1read $HOME/.vim/snippets/for.php<CR>
-nnoremap <LEADER>pfore :-1read $HOME/.vim/snippets/foreach.php<CR>
+nnoremap <LEADER>html :-1read $HOME/.vim/snippets/html<CR>
 nnoremap <LEADER>vue :-1read $HOME/.vim/snippets/vue<CR>
+nnoremap <LEADER>if :-1read $HOME/.vim/snippets/if<CR>
+nnoremap <LEADER>ife :-1read $HOME/.vim/snippets/ife<CR>
+nnoremap <LEADER>for :-1read $HOME/.vim/snippets/for<CR>
+nnoremap <LEADER>while :-1read $HOME/.vim/snippets/while<CR>
+nnoremap <LEADER>class :-1read $HOME/.vim/snippets/class<CR>
+nnoremap <LEADER>{} :-1read $HOME/.vim/snippets/literal<CR>
+nnoremap <LEADER>fun :-1read $HOME/.vim/snippets/fun<CR>
+nnoremap <LEADER>log :-1read $HOME/.vim/snippets/log<CR>
