@@ -171,8 +171,6 @@ set notagrelative " tags 的內容使用絕對路徑
 " 更新 ctags 檔
 nnoremap <F4> :!ctags -R -f ~/.cache/tags --exclude=.git --exclude=vendor --exclude=node_modules --exclude=.github --exclude=public --exclude=storage<CR>
 
-" use snipmate new parser
-let g:snipMate = { 'snippet_version' : 1 }
 "-------------------
 " SNIPPETS
 "-------------------
