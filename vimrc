@@ -147,6 +147,8 @@ noremap <C-]> g<C-]>
 "-------------------
 " AUTO COMPLETE
 "-------------------
+" TAB remap to Ctrl + N
+inoremap <TAB> <C-N>
 " 在 ex mode 輸入 %%，自動帶入目前緩衝區所在目錄
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
