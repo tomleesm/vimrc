@@ -94,6 +94,13 @@ runtime macros/matchit.vim " 啟用 matchit 外掛
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" 記住檔案的摺疊
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
 "-------------------
 " THEME AND SYNTAX
 "-------------------
