@@ -40,6 +40,7 @@ git rm bundle/{plugin} # 會自動修改 .gitmodule
 
 ```
 git submodule add --force {github-url} bundle/{plugin}
+git submodule update --init
 ```
 
 ### 安裝的外掛：
