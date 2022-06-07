@@ -33,11 +33,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 map <leader><space> :FixWhitespace<CR>
 
 " Git 快速鍵設定
-nnoremap <F5> :Git status<CR>
-nnoremap <F6> :Gdiffsplit<CR> " 比較修改了什麼
-nnoremap <F7> :GV<CR> " 使用 gv.vim 顯示 git log
-nnoremap <F8> :Git add %<CR> " git add 目前的檔案
-nnoremap <F10> :Gread<CR> " 撤銷修改，等於 :Git checkout -- %
+" nnoremap <F5> :Git status<CR>
+" nnoremap <F6> :Gdiffsplit<CR> " 比較修改了什麼
+" nnoremap <F7> :GV<CR> " 使用 gv.vim 顯示 git log
+" nnoremap <F8> :Git add %<CR> " git add 目前的檔案
+" nnoremap <F10> :Gread<CR> " 撤銷修改，等於 :Git checkout -- %
 
 "-------------------
 " FILE ENCODING
@@ -59,6 +59,20 @@ set autoread " auto reload when file is changed from outside
 " Restore cursor to file position in previous editing session
 set viminfo='10,\"100,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+" Automatically save the current session whenever vim is closed
+autocmd VimLeave * mksession! ~/.cache/shutdown_session.vim
+" <F7> restores that 'shutdown session'
+noremap <F7> :source ~/.cache/shutdown_session.vim<CR>
+" If you really want to, this next line should restore the shutdown session
+" automatically, whenever you start vim.  (Commented out for now, in case
+" somebody just copy/pastes this whole block)
+"
+" autocmd VimEnter source ~/.cache/shutdown_session.vim<CR>
+" manually save a session with <F5>
+noremap <F5> :mksession! ~/.cache/manual_session.vim<cr>
+" recall the manually saved session with <F6>
+noremap <F6> :source ~/.cache/manual_session.vim<cr>
 
 "-------------------
 " TEXT FORMAT
