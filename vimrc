@@ -52,6 +52,7 @@ set fileencodings=ucs-bom,utf-8,taiwan,big5,gb2312,latin1 " 嘗試使用哪些�
 "-------------------
 set hidden " 切換緩衝區時，不再提示未存檔，改在離開 Vim 時提示存檔
 set nobackup " 不要產生修改前的備份檔，也就是 *.*~
+set nowritebackup
 set swapfile " 產生 swp 檔，備份緩衝區中的內容
 set directory=/tmp " 設定 swap 檔存放的目錄
 set autoread " auto reload when file is changed from outside
@@ -191,6 +192,9 @@ set tags+=~/.cache/tags " 設定 ctags 標籤檔位置
 set notagrelative " tags 的內容使用絕對路徑
 " 更新 ctags 檔
 nnoremap <F4> :!ctags -R -f ~/.cache/tags --exclude=.git --exclude=vendor --exclude=node_modules --exclude=.github --exclude=public --exclude=storage<CR>
+
+" COC 外掛
+let g:coc_global_extensions = [ 'coc-blade', 'coc-html' ]
 
 "-------------------
 " SNIPPETS
