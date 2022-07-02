@@ -194,6 +194,11 @@ set notagrelative " tags 的內容使用絕對路徑
 " 更新 ctags 檔
 nnoremap <F4> :!ctags -R -f ~/.cache/tags --exclude=.git --exclude=vendor --exclude=node_modules --exclude=.github --exclude=public --exclude=storage<CR>
 
+" 設定在 normal 和 insert mode 輸入 <LEADER>; 自動在結尾輸入分號
+" 同時游標停留在同樣的位置和模式
+autocmd FileType javascript,css,php nmap <silent> <LEADER>; <Plug>(cosco-commaOrSemiColon)
+autocmd FileType javascript,css,php imap <silent> <LEADER>; <C-O><Plug>(cosco-commaOrSemiColon)
+
 "-------------------
 " SNIPPETS
 "-------------------
