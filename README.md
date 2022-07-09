@@ -23,14 +23,6 @@ rm ack
 sudo apt install exuberant-ctags
 ```
 
-# install coc.nvim
-
-``` bash
-cd ~/.vim/bundle/coc.nvim
-git checkout -b release origin/release
-yarn install --frozen-lockfile
-```
-
 #### 新增外掛：
 
 ```
@@ -68,7 +60,6 @@ git submodule update --init
 - [vim-signature](https://github.com/kshenoy/vim-signature): 左邊的 navigate marks highlight 顯示
 - [auto-pairs](https://github.com/jiangmiao/auto-pairs): 輸入左括號，會自動產生右括號
 - [cosco.vim](https://github.com/lfilho/cosco.vim): 在 normal 和 insert mode 輸入 `<LEADER>;`，會在結尾輸入分號，同時保留原有的位置和模式，`<LEADER>,` 則是逗號
-- [coc.nvim](https://github.com/neoclide/coc.nvim): 和 VSCode 一樣的自動補齊功能
 
 ### remap Caps Lock to Ctrl, and Ctrl is still Ctrl
 

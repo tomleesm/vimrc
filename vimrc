@@ -197,8 +197,6 @@ nnoremap <F4> :!ctags -R -f ~/.cache/tags --exclude=.git --exclude=vendor --excl
 " 同時游標停留在同樣的位置和模式
 autocmd FileType javascript,css,php nmap <silent> <LEADER>; <Plug>(cosco-commaOrSemiColon)
 autocmd FileType javascript,css,php imap <silent> <LEADER>; <C-O><Plug>(cosco-commaOrSemiColon)
-" COC 外掛清單
-let g:coc_global_extensions = [ 'coc-blade', 'coc-html' ]
 
 "-------------------
 " SNIPPETS

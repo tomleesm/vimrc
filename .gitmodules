@@ -46,6 +46,3 @@
 [submodule "bundle/cosco.vim"]
 	path = bundle/cosco.vim
 	url = https://github.com/lfilho/cosco.vim.git
-[submodule "bundle/coc.nvim"]
-	path = bundle/coc.nvim
-	url = https://github.com/neoclide/coc.nvim.git
