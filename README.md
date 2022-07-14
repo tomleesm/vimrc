@@ -59,7 +59,8 @@ git submodule update --init
 - [vim-polyglot](https://github.com/sheerun/vim-polyglot): 各種語法 highlight 支援
 - [vim-signature](https://github.com/kshenoy/vim-signature): 左邊的 navigate marks highlight 顯示
 - [auto-pairs](https://github.com/jiangmiao/auto-pairs): 輸入左括號，會自動產生右括號
-- [cosco.vim](https://github.com/lfilho/cosco.vim): 在 normal 和 insert mode 輸入 `<LEADER>;`，會在結尾輸入分號，同時保留原有的位置和模式，`<LEADER>,` 則是逗號
+- [cosco.vim](https://github.com/lfilho/cosco.vim): 在 normal 和 insert mode 輸入 `<LEADER>;`，會在結尾輸入分號，同時保留原有的位置和模式
+- [emmet.vim](https://github.com/mattn/emmet-vim): emmet for vim，快速新增、修改與刪除 HTML
 
 ### remap Caps Lock to Ctrl, and Ctrl is still Ctrl
 
