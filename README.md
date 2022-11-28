@@ -14,7 +14,7 @@ cd ~/.vim
 git submodule update --init
 
 # install ack for ack.vim
-wget https://beyondgrep.com/ack-v3.4.0 -O ack
+wget https://beyondgrep.com/ack-v3.6.0 -O ack
 chmod +x ack
 sudo cp ack /usr/bin/
 rm ack
