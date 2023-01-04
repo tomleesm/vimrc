@@ -55,7 +55,7 @@ git submodule update --init
 - [NERDTree](https://github.com/preservim/nerdtree): 側邊欄檔案管理
 - [vim-buftabline](https://github.com/ap/vim-buftabline): 顯示 buffer 分頁。air-line 提供的分頁字太大，也不會顯示右邊是否有其他分頁
 - [lightline.vim](https://github.com/itchyny/lightline.vim): 底下的狀態列
-- [vim-easy-align](https://github.com/junegunn/vim-easy-align): 方便對齊等號、空格
+- ~~[vim-easy-align](https://github.com/junegunn/vim-easy-align): 方便對齊等號、空格~~
 - [vim-polyglot](https://github.com/sheerun/vim-polyglot): 各種語法 highlight 支援
 - [vim-signature](https://github.com/kshenoy/vim-signature): 左邊的 navigate marks highlight 顯示
 - [auto-pairs](https://github.com/jiangmiao/auto-pairs): 輸入左括號，會自動產生右括號
