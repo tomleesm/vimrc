@@ -3,7 +3,7 @@
 "-------------------
 set nocompatible " not compatible with the old-fashion vi mode
 set mouse=a " 啟用滑鼠操作，選項參考 :h mouse
-set history=200 " ex 命令的歷史紀錄筆數
+set history=50 " ex 命令的歷史紀錄筆數
 
 " 設定 <Leader> 鍵是逗號，原來逗號的按鍵改成 g;
 let g:mapleader=","
@@ -32,13 +32,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " ,<space> 清除所有行尾空格
 map <leader><space> :FixWhitespace<CR>
 
-" Git 快速鍵設定
-" nnoremap <F5> :Git status<CR>
-" nnoremap <F6> :Gdiffsplit<CR> " 比較修改了什麼
-" nnoremap <F7> :GV<CR> " 使用 gv.vim 顯示 git log
-" nnoremap <F8> :Git add %<CR> " git add 目前的檔案
-" nnoremap <F10> :Gread<CR> " 撤銷修改，等於 :Git checkout -- %
-
 "-------------------
 " FILE ENCODING
 "-------------------
@@ -60,20 +53,6 @@ set autoread " auto reload when file is changed from outside
 " Restore cursor to file position in previous editing session
 set viminfo='10,\"100,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
-
-" Automatically save the current session whenever vim is closed
-autocmd VimLeave * mksession! ~/.cache/shutdown_session.vim
-" <F7> restores that 'shutdown session'
-noremap <F7> :source ~/.cache/shutdown_session.vim<CR>
-" If you really want to, this next line should restore the shutdown session
-" automatically, whenever you start vim.  (Commented out for now, in case
-" somebody just copy/pastes this whole block)
-"
-" autocmd VimEnter source ~/.cache/shutdown_session.vim<CR>
-" manually save a session with <F5>
-noremap <F5> :mksession! ~/.cache/manual_session.vim<cr>
-" recall the manually saved session with <F6>
-noremap <F6> :source ~/.cache/manual_session.vim<cr>
 
 "-------------------
 " TEXT FORMAT
@@ -105,17 +84,6 @@ set pastetoggle=<F3> " 切換 paste 模式
 "set showmatch " 輸入 ) 和 }，游標會自動跳轉到 ( 和 { 以確定成對，然後再跳回來
 runtime macros/matchit.vim " 啟用 matchit 外掛
 
-" Start interactive EasyAlign in visual mode (e.g. vipga)
-xmap ga <Plug>(EasyAlign)
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)
-
-" 記住檔案的摺疊
-augroup remember_folds
-  autocmd!
-  autocmd BufWinLeave * mkview
-  autocmd BufWinEnter * silent! loadview
-augroup END
 "-------------------
 " THEME AND SYNTAX
 "-------------------
@@ -123,15 +91,8 @@ syntax on " syntax highlight
 colorscheme wombat256mod
 set cursorline " 游標所在行加上標示
 
-" Insert mode: absolute line number
-" Normal mode: relative line number
 :set number
 
-:augroup numbertoggle
-:  autocmd!
-:  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
-:  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
-:augroup END
 "--------------------------------
 set wrap " 超過視窗大小就自動換行
 
@@ -144,10 +105,7 @@ let g:lightline = {
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'modified', 'readonly' ] ],
-      \   'right': [ [ 'gitbranch', 'fileformat', 'fileencoding', 'percent' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
+      \   'right': [ [ 'fileformat', 'fileencoding', 'percent' ] ]
       \ }
       \ }
 
@@ -175,13 +133,6 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 set wildmenu " ex mode 自動補齊，會列出清單
 set wildignore=*.o,*.class " 自動補齊不列出哪些檔案
 
-" 設定 path 為 Laravel 的資料夾，方便用 :find 打開檔案
-set path+=app/**,resources/**,routes/**,bootstrap/**,database/**,tests/**,config/**,storage/**
-" 設定 :make 來執行單元測試
-set makeprg=php\ ./vendor/bin/phpunit\ --stop-on-failure
-" 按下 ,l 存檔並檢查 php 語法
-autocmd FileType php noremap <LEADER>l :w!<CR>:!php -l %<CR>
-
 let s:tags_dictionary = expand('~/.cache') " all tags files store in ~/.cache
 " create tags dictionary if not exists
 if !isdirectory(s:tags_dictionary)
@@ -191,23 +142,4 @@ endif
 set tags+=~/.cache/tags " 設定 ctags 標籤檔位置
 set notagrelative " tags 的內容使用絕對路徑
 " 更新 ctags 檔
-nnoremap <F4> :!ctags -R -f ~/.cache/tags --exclude=.git --exclude=vendor --exclude=node_modules --exclude=.github --exclude=public --exclude=storage<CR>
-
-" 設定在 normal 和 insert mode 輸入 <LEADER>; 自動在結尾輸入分號
-" 同時游標停留在同樣的位置和模式
-autocmd FileType javascript,css,php nmap <silent> <LEADER>; <Plug>(cosco-commaOrSemiColon)
-autocmd FileType javascript,css,php imap <silent> <LEADER>; <C-O><Plug>(cosco-commaOrSemiColon)
-
-"-------------------
-" SNIPPETS
-"-------------------
-nnoremap <LEADER>html :-1read $HOME/.vim/snippets/html<CR>
-nnoremap <LEADER>vue :-1read $HOME/.vim/snippets/vue<CR>
-nnoremap <LEADER>if :-1read $HOME/.vim/snippets/if<CR>
-nnoremap <LEADER>ife :-1read $HOME/.vim/snippets/ife<CR>
-nnoremap <LEADER>for :-1read $HOME/.vim/snippets/for<CR>
-nnoremap <LEADER>while :-1read $HOME/.vim/snippets/while<CR>
-nnoremap <LEADER>class :-1read $HOME/.vim/snippets/class<CR>
-nnoremap <LEADER>{} :-1read $HOME/.vim/snippets/literal<CR>
-nnoremap <LEADER>fun :-1read $HOME/.vim/snippets/fun<CR>
-nnoremap <LEADER>log :-1read $HOME/.vim/snippets/log<CR>
+nnoremap <F5> :!ctags -R -f ~/.cache/tags --exclude=.git --exclude=vendor --exclude=node_modules --exclude=.github --exclude=public --exclude=storage<CR>
