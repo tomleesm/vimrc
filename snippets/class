@@ -1,5 +1,0 @@
-class A extends Object {
-  public __parent(TypeHint $t) {
-
-  }
-}
