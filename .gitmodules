@@ -25,9 +25,6 @@
 [submodule "bundle/vim-polyglot"]
 	path = bundle/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
-[submodule "bundle/gv.vim"]
-	path = bundle/gv.vim
-	url = https://github.com/junegunn/gv.vim.git
 [submodule "bundle/vim-signature"]
 	path = bundle/vim-signature
 	url = https://github.com/kshenoy/vim-signature.git
