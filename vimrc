@@ -143,3 +143,7 @@ set tags+=~/.cache/tags " 設定 ctags 標籤檔位置
 set notagrelative " tags 的內容使用絕對路徑
 " 更新 ctags 檔
 nnoremap <F5> :!ctags -R -f ~/.cache/tags --exclude=.git --exclude=vendor --exclude=node_modules --exclude=.github --exclude=public --exclude=storage<CR>
+
+" 在 Insert mode 輸入兩個 ; 會在該行結尾加上 ; 後換行，並維持 Insert mode
+" 方便需要用分號結束 statement 的程式語言，例如 PHP, Java, C, Rust
+inoremap ;; <ESC>h2xA;<CR>
