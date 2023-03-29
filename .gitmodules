@@ -28,3 +28,9 @@
 [submodule "bundle/auto-pairs"]
 	path = bundle/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule "bundle/ranger.vim"]
+	path = bundle/ranger.vim
+	url = https://github.com/francoiscabrol/ranger.vim.git
+[submodule "bundle/bclose.vim"]
+	path = bundle/bclose.vim
+	url = https://github.com/rbgrouleff/bclose.vim.git

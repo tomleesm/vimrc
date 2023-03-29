@@ -21,6 +21,10 @@ rm ack
 
 # install exuberant-ctags
 sudo apt install exuberant-ctags
+
+# install ranger-fm for Ranger.vim
+sudo apt install python3 python3-pip
+sudo pip3 install ranger-fm
 ```
 
 #### 新增外掛：
@@ -48,11 +52,12 @@ git submodule update --init
 - ~~[commentary.vim](https://github.com/tpope/vim-commentary): 可用 `gcc` 或 `gc {motion}` 註解~~
 - [unimpaired.vim](https://github.com/tpope/vim-unimpaired): 各種成對操作。 `]q` 是 `:cnext`, `[Q` 是 `:cprevious`. `]a` 是 `:next`. `[b` 是 `:bprevious`, `[<Space>` 和 `]<Space>` 是在上一行和下一行新增一行，等於大寫 `O<Esc>`
 - [vim-visual-star-search](https://github.com/nelstrom/vim-visual-star-search): 用 visual mode 選取後，按 `*` 或 `#` 可以搜尋或反向搜尋，按 `,*` 則是用 vimgrep 搜尋
-- ~~ [ack.vim](https://github.com/mileszs/ack.vim): 在 Vim 內用 ack 搜尋檔案~~
+- ~~[ack.vim](https://github.com/mileszs/ack.vim): 在 Vim 內用 ack 搜尋檔案~~
 - [vim-trailing-whitespace](https://github.com/bronson/vim-trailing-whitespace): 自動標示行尾空格，並設定 `,<space>` 全部清除
 - ~~[fugitive.vim](https://github.com/tpope/vim-fugitive): Git Wrapper for Vim~~
 - ~~[gv.vim](https://github.com/junegunn/gv.vim): 顯示 git log 和每個 commit 修改了什麼~~
-- [NERDTree](https://github.com/preservim/nerdtree): 側邊欄檔案管理
+- ~~[NERDTree](https://github.com/preservim/nerdtree): 側邊欄檔案管理~~ 改用 Ranger
+- [Ranger.vim](https://github.com/francoiscabrol/ranger.vim): 檔案管理。NERDTree 在檔名稍長時會被切掉，而且沒有預覽
 - [vim-buftabline](https://github.com/ap/vim-buftabline): 顯示 buffer 分頁。air-line 提供的分頁字太大，也不會顯示右邊是否有其他分頁
 - [lightline.vim](https://github.com/itchyny/lightline.vim): 底下的狀態列
 - ~~[vim-easy-align](https://github.com/junegunn/vim-easy-align): 方便對齊等號、空格~~
