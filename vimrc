@@ -78,6 +78,7 @@ set pastetoggle=<F3> " 切換 paste 模式
 "set showmatch " 輸入 ) 和 }，游標會自動跳轉到 ( 和 { 以確定成對，然後再跳回來
 runtime macros/matchit.vim " 啟用 matchit 外掛
 
+" 設定 80 個字元的右邊是不同的背景顏色
 let &colorcolumn=join(range(81,999),",")
 highlight ColorColumn ctermbg=232 guibg=#080808
 "-------------------
