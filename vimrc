@@ -2,7 +2,6 @@
 " ALL SETTING EFFECT
 "-------------------
 set nocompatible " not compatible with the old-fashion vi mode
-set mouse=a " 啟用滑鼠操作，選項參考 :h mouse
 set history=50 " ex 命令的歷史紀錄筆數
 
 " 設定 <Leader> 鍵是逗號，原來逗號的按鍵改成 g;
