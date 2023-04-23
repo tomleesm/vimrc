@@ -8,6 +8,11 @@ set history=50 " ex 命令的歷史紀錄筆數
 let g:mapleader=","
 noremap g; ,
 
+" 禁用方向鍵
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 "-------------------
 " PLUGIN
 "-------------------
@@ -90,7 +95,6 @@ set cursorline " 游標所在行加上標示
 set number
 noremap <F4> :set invnumber<CR> " 切換顯示左側行數
 
-"--------------------------------
 set wrap " 超過視窗大小就自動換行
 
 " 啟用 256 色支援和 laststatus=2，lightline 才會正常顯示
