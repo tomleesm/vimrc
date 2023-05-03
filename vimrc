@@ -90,7 +90,6 @@ highlight ColorColumn ctermbg=232 guibg=#080808
 "-------------------
 syntax on " syntax highlight
 colorscheme wombat256mod
-set cursorline " 游標所在行加上標示
 
 set number
 noremap <F4> :set invnumber<CR> " 切換顯示左側行數
