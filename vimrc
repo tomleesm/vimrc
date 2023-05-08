@@ -62,7 +62,6 @@ set expandtab " 按下 <Tab> 時改插入 space
 set softtabstop=2 " 按下 <Tab> 時插入幾個 space
 
 autocmd FileType Makefile setlocal noexpandtab " <Tab> 在 makefile 有特殊意義，所以不要改插入 space
-autocmd FileType php setlocal shiftwidth=4 expandtab softtabstop=4 " php 遵守 PSR-2，縮排使用 4 個空格
 
 " formatoptions: 文字格式化的選項
 "   t：根據 textwidth 自動換行；
