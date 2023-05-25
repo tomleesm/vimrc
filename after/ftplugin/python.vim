@@ -2,3 +2,4 @@
 " 方便 Python 的 function 和迴圈第一行結尾加上冒號
 inoremap :: <ESC>A:<CR>
 
+inoremap <TAB>me <ESC>:-1read $HOME/.vim/snippets/python/method<CR>
