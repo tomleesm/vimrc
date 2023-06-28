@@ -81,9 +81,6 @@ set pastetoggle=<F3> " 切換 paste 模式
 "set showmatch " 輸入 ) 和 }，游標會自動跳轉到 ( 和 { 以確定成對，然後再跳回來
 runtime macros/matchit.vim " 啟用 matchit 外掛
 
-" 設定 80 個字元的右邊是不同的背景顏色
-let &colorcolumn=join(range(81,999),",")
-highlight ColorColumn ctermbg=232 guibg=#080808
 "-------------------
 " THEME AND SYNTAX
 "-------------------
@@ -97,6 +94,8 @@ set wrap " 超過視窗大小就自動換行
 
 " 啟用 256 色支援和 laststatus=2，lightline 才會正常顯示
 set t_Co=256
+" 啟用游標行
+set cursorline
 set laststatus=2
 set noshowmode " 不顯示最底下 -- INSERT -- 提示
 let g:lightline = {
@@ -112,6 +111,10 @@ let g:lightline = {
 let g:buftabline_show=1 " show buffer list if there are two or more buffers
 let g:buftabline_numbers=1 " show buffer number
 let g:buftabline_indicators=1 " 標示 buffer 已改變
+
+" 設定 80 個字元的右邊是不同的背景顏色
+let &colorcolumn=join(range(81,999),",")
+highlight ColorColumn ctermbg=232 guibg=#080808
 "-------------------
 " SEARCH AND REPLACE
 "-------------------
