@@ -88,7 +88,6 @@ syntax on " syntax highlight
 colorscheme wombat256mod
 
 set number
-noremap <F4> :set invnumber<CR> " 切換顯示左側行數
 
 set wrap " 超過視窗大小就自動換行
 
