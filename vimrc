@@ -9,18 +9,7 @@ let g:mapleader=","
 noremap g; ,
 
 " 禁用方向鍵
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-inoremap <Up> <Nop>
-inoremap <Down> <Nop>
-inoremap <Left> <Nop>
-inoremap <Right> <Nop>
-vnoremap <Up> <Nop>
-vnoremap <Down> <Nop>
-vnoremap <Left> <Nop>
-vnoremap <Right> <Nop>
+source config/disable_arrow_key.vim
 "-------------------
 " PLUGIN
 "-------------------
@@ -56,33 +45,18 @@ set swapfile " 產生 swp 檔，備份緩衝區中的內容
 set directory=/tmp " 設定 swap 檔存放的目錄
 set autoread " auto reload when file is changed from outside
 
-" Restore cursor to file position in previous editing session
-set viminfo='10,\"100,:20,%,n~/.viminfo
-au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+source config/restore_cursor_to_last_position.vim
 
 "-------------------
 " TEXT FORMAT
 "-------------------
 filetype indent on " Enable filetype-specific indenting
 set smartindent " 使用 smart indent
-set shiftwidth=2 " 使用 >> 命令縮排時，一次移動幾個 space
-set expandtab " 按下 <Tab> 時改插入 space
-set softtabstop=2 " 按下 <Tab> 時插入幾個 space
+source config/indent_2_space.vim
 
 autocmd FileType Makefile setlocal noexpandtab " <Tab> 在 makefile 有特殊意義，所以不要改插入 space
 
-" formatoptions: 文字格式化的選項
-"   t：根據 textwidth 自動換行；
-"   c：程式碼註解中自動換行，插入合適的註解開始字元
-"   r：插入模式下在註解中輸入 return 時，插入合適的註解開始字元
-"   q：可使用 gq 命令對註解格式化
-"   n：識別編號列表，編號行的下一行的縮排由數字後的空白決定（與 2 衝突，需要 autoindent )
-"   2：使用一段的第二行的縮排來格式化文字
-"   l：在目前行長度超過 textwidth 時，不自動重新格式化
-"   m：在多字節字符處可以折行，對中文特別有效（否則只在空白字符處折行）
-"   M：在拼接兩行時（重新格式化，或者是手工使用 J 命令），如果前一行的結尾或後一行的開頭是多字節字符，則不插入空格，非常適合中文
-"   Vim 預設是 tcq
-set formatoptions+=mM
+source config/format_option.vim
 
 set pastetoggle=<F3> " 切換 paste 模式
 
@@ -142,13 +116,5 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 set wildmenu " ex mode 自動補齊，會列出清單
 set wildignore=*.o,*.class " 自動補齊不列出哪些檔案
 
-let s:tags_dictionary = expand('~/.cache') " all tags files store in ~/.cache
-" create tags dictionary if not exists
-if !isdirectory(s:tags_dictionary)
-   silent! call mkdir(s:tags_dictionary, 'p')
-endif
+source config/tags.vim
 
-set tags+=~/.cache/tags " 設定 ctags 標籤檔位置
-set notagrelative " tags 的內容使用絕對路徑
-" 更新 ctags 檔
-nnoremap <F5> :!ctags -R -f ~/.cache/tags --exclude=.git --exclude=vendor --exclude=node_modules --exclude=.github --exclude=public --exclude=storage<CR>
