@@ -66,6 +66,7 @@ git submodule update --init
 - [auto-pairs](https://github.com/jiangmiao/auto-pairs): 輸入左括號，會自動產生右括號
 - ~~[cosco.vim](https://github.com/lfilho/cosco.vim): 在 normal 和 insert mode 輸入 `<LEADER>;`，會在結尾輸入分號，同時保留原有的位置和模式~~
 - ~~[emmet.vim](https://github.com/mattn/emmet-vim): emmet for vim，快速新增、修改與刪除 HTML~~
+- [vim-auto-save](https://github.com/907th/vim-auto-save): 自動存檔
 
 ### remap Caps Lock to Ctrl, and Ctrl is still Ctrl
 
