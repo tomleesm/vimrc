@@ -4,3 +4,4 @@ source config/indent_4_space.vim
 source config/path_laravel.vim
 
 source config/insert_semicolon.vim
+source config/auto_save.vim
