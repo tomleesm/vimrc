@@ -9,7 +9,7 @@ let g:mapleader=","
 noremap g; ,
 
 " 禁用方向鍵
-source config/disable_arrow_key.vim
+source ~/.vim/config/disable_arrow_key.vim
 "-------------------
 " PLUGIN
 "-------------------
@@ -45,7 +45,7 @@ set swapfile " 產生 swp 檔，備份緩衝區中的內容
 set directory=/tmp " 設定 swap 檔存放的目錄
 set autoread " auto reload when file is changed from outside
 
-source config/restore_cursor_to_last_position.vim
+source ~/.vim/config/restore_cursor_to_last_position.vim
 " 預設不啟動自動存檔，改成特定檔案類型才有
 let g:auto_save = 0
 " 不顯示自動存檔時間
@@ -56,11 +56,11 @@ let g:auto_save_silent = 1
 "-------------------
 filetype indent on " Enable filetype-specific indenting
 set smartindent " 使用 smart indent
-source config/indent_2_space.vim
+source ~/.vim/config/indent_2_space.vim
 
 autocmd FileType Makefile setlocal noexpandtab " <Tab> 在 makefile 有特殊意義，所以不要改插入 space
 
-source config/format_option.vim
+source ~/.vim/config/format_option.vim
 
 set pastetoggle=<F3> " 切換 paste 模式
 
@@ -120,5 +120,5 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 set wildmenu " ex mode 自動補齊，會列出清單
 set wildignore=*.o,*.class " 自動補齊不列出哪些檔案
 
-source config/tags.vim
+source ~/.vim/config/tags.vim
 
