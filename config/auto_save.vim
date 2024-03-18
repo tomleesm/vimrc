@@ -1,1 +1,1 @@
-let g:auto_save = 1
+autocmd TextChanged,InsertLeave <buffer> silent write

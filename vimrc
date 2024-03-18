@@ -46,10 +46,6 @@ set directory=/tmp " 設定 swap 檔存放的目錄
 set autoread " auto reload when file is changed from outside
 
 source ~/.vim/config/restore_cursor_to_last_position.vim
-" 預設不啟動自動存檔，改成特定檔案類型才有
-let g:auto_save = 0
-" 不顯示自動存檔時間
-let g:auto_save_silent = 1
 
 "-------------------
 " TEXT FORMAT
