@@ -34,6 +34,3 @@
 [submodule "bundle/bclose.vim"]
 	path = bundle/bclose.vim
 	url = https://github.com/rbgrouleff/bclose.vim.git
-[submodule "bundle/vim-auto-save"]
-	path = bundle/vim-auto-save
-	url = https://github.com/907th/vim-auto-save.git
