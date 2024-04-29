@@ -1,36 +1,12 @@
-[submodule "bundle/vim-unimpaired"]
-	path = bundle/vim-unimpaired
-	url = https://github.com/tpope/vim-unimpaired.git
-[submodule "bundle/vim-visual-star-search"]
-	path = bundle/vim-visual-star-search
-	url = https://github.com/nelstrom/vim-visual-star-search.git
-[submodule "bundle/vim-repeat"]
-	path = bundle/vim-repeat
-	url = https://github.com/tpope/vim-repeat.git
-[submodule "bundle/vim-trailing-whitespace"]
-	path = bundle/vim-trailing-whitespace
-	url = https://github.com/bronson/vim-trailing-whitespace.git
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = https://github.com/preservim/nerdtree.git
-[submodule "bundle/vim-buftabline"]
-	path = bundle/vim-buftabline
-	url = https://github.com/ap/vim-buftabline.git
 [submodule "bundle/lightline.vim"]
 	path = bundle/lightline.vim
 	url = https://github.com/itchyny/lightline.vim.git
 [submodule "bundle/vim-polyglot"]
 	path = bundle/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
-[submodule "bundle/vim-signature"]
-	path = bundle/vim-signature
-	url = https://github.com/kshenoy/vim-signature.git
 [submodule "bundle/auto-pairs"]
 	path = bundle/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs.git
-[submodule "bundle/ranger.vim"]
-	path = bundle/ranger.vim
-	url = https://github.com/francoiscabrol/ranger.vim.git
 [submodule "bundle/bclose.vim"]
 	path = bundle/bclose.vim
 	url = https://github.com/rbgrouleff/bclose.vim.git
