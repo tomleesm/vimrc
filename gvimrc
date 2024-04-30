@@ -25,3 +25,5 @@ inoremap <C-H> <C-O>:%s///gc<Left><Left><Left><Left>
 let g:buftabline_show=1 " show buffer list if there are two or more buffers
 let g:buftabline_numbers=1 " show buffer number
 let g:buftabline_indicators=1 " 標示 buffer 已改變
+inoremap <C-J> <C-O>:bprev<CR>
+inoremap <C-K> <C-O>:bnext<CR>
