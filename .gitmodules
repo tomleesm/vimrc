@@ -10,3 +10,6 @@
 [submodule "bundle/bclose.vim"]
 	path = bundle/bclose.vim
 	url = https://github.com/rbgrouleff/bclose.vim.git
+[submodule "bundle/vim-buftabline"]
+	path = bundle/vim-buftabline
+	url = https://github.com/ap/vim-buftabline.git
