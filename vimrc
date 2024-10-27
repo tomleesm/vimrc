@@ -10,6 +10,13 @@ noremap g; ,
 
 " 禁用方向鍵
 source ~/.vim/config/disable_arrow_key.vim
+" 解決 VTE-based terminal 造成的游標問題
+let &t_SI = "\<Esc>[6 q" " I beam cursor for insert mode
+let &t_SR = "\<Esc>[4 q" " underline cursor for replace mode
+let &t_EI = "\<Esc>[2 q" " block cursor for normal mode
+set ttimeout
+set ttimeoutlen=1
+set ttyfast
 "-------------------
 " PLUGIN
 "-------------------
