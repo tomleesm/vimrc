@@ -75,6 +75,8 @@ runtime macros/matchit.vim " 啟用 matchit 外掛
 "-------------------
 syntax on " syntax highlight
 colorscheme wombat256mod
+" 避免 syntax highlight 消失
+autocmd BufEnter * syntax sync fromstart
 
 set number
 
