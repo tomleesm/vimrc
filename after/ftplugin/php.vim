@@ -3,5 +3,4 @@ source ~/.vim/config/indent_4_space.vim
 " 設定 path 為 Laravel 的資料夾，方便用 :find 打開檔案
 source ~/.vim/config/path_laravel.vim
 
-source ~/.vim/config/insert_semicolon.vim
 source ~/.vim/config/auto_save.vim
