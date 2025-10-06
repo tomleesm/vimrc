@@ -79,3 +79,4 @@ set incsearch " 隨打即找
 set smartcase " 如果搜尋條件有大寫字母，才區分大小寫
 set hlsearch " search highlighting
 
+let g:wiki_root = '~/Dropbox/apps/wiki.vim-private'
