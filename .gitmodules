@@ -34,3 +34,6 @@
 [submodule "bundle/bclose.vim"]
 	path = bundle/bclose.vim
 	url = https://github.com/rbgrouleff/bclose.vim.git
+[submodule "bundle/wiki.vim"]
+	path = bundle/wiki.vim
+	url = https://github.com/lervag/wiki.vim.git
