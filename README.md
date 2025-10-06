@@ -67,6 +67,7 @@ git submodule update --init
 - ~~[cosco.vim](https://github.com/lfilho/cosco.vim): 在 normal 和 insert mode 輸入 `<LEADER>;`，會在結尾輸入分號，同時保留原有的位置和模式~~
 - ~~[emmet.vim](https://github.com/mattn/emmet-vim): emmet for vim，快速新增、修改與刪除 HTML~~
 - ~~[vim-auto-save](https://github.com/907th/vim-auto-save)~~: 自動存檔。改用自建指令
+- [wiki.vim](https://github.com/lervag/wiki.vim): 使用 markdown 語法寫 wiki
 
 ### remap Caps Lock to Ctrl, and Ctrl is still Ctrl
 
