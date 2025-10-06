@@ -3,6 +3,9 @@
 "-------------------
 set nocompatible " not compatible with the old-fashion vi mode
 set mouse=a
+" 設定 <Leader> 鍵是逗號，原來逗號的按鍵改成 g;
+let mapleader=","
+noremap g; ,
 
 "-------------------
 " PLUGIN
